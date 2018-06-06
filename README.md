@@ -6,7 +6,7 @@ Code and public data for paper on CO2 flux time series in Qu'Appelle lakes.
 
 ## Original code repository
 
-The original repository for all R code on the paper can be found at [https://github.com/ewiik/flux](), where code may still be changing due to it being used for multiple papers.
+The original repository for all R code on the paper can be found at [https://github.com/ewiik/flux](https://github.com/ewiik/flux), where code may still be changing due to it being used for multiple papers.
 
 ## What was done for this archive version and paper
 
