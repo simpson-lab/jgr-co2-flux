@@ -4,7 +4,7 @@ Code and public data for paper on CO2 flux time series in Qu'Appelle lakes
 
 ## Original code repository
 
-The original repository for all R code on the paper can be found at https://github.com/ewiik/flux, where code may still be changing due to it being used for multiple papers.
+The original repository for all R code on the paper can be found at [https://github.com/ewiik/flux](), where code may still be changing due to it being used for multiple papers.
 
 ## What was done for this archive version and paper
 
@@ -12,7 +12,7 @@ All code for data manipulation and plots for producing this paper were rerun on 
 
 ### `docs/`
 
-Aall private and open docs removed apart from a copy of `makefile-prep.txt`, renamed `metadata-code.md` for this archive and fleshed out
+All private and open docs removed apart from a copy of `makefile-prep.txt`, renamed `metadata-code.md` for this archive and fleshed out
 
 ### `data/`
 
@@ -27,9 +27,7 @@ files were retained:
 private original data was retained, R-generated data was removed
 
 ### code rerun
-Code was rerun from scratch, following order outlined in metadata-code.txt.
-New supplementary figures following revision are created in flux-appendix-figs.R.
-Typos of units of oxygen and DOC in one plot were corrected.
+Code was rerun from scratch, following order outlined in `metadata-code.md`. New supplementary figures following revision are created in `flux-appendix-figs.R`. Typos of units of oxygen and DOC in one plot were corrected.
 
 ## Metadata information
 
