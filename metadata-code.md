@@ -55,33 +55,36 @@ a. co2ExplVar:
       * makes a production outlier NA
    7. merges all above excepting climate indices, and saves as co2explained.rds
       * this has all the POTENTIAL predictors too	
-b. regression_routines: combines co2 flux with predictors; subsets available predictors from
-		co2explained; reads in params-flux.rds; co2explained.rds
-	deals with remaining outliers
-	saves data frame with selected predictors and NAs removed as regvars.rds 
+
+b. regression_routines:
+
+   * combines co2 flux with predictors
+   * subsets available predictors from co2explained
+   * reads in `params-flux.rds`; `co2explained.rds`
+   * deals with remaining outliers
+   * saves data frame with selected predictors and `NA`s removed as `regvars.rds`
+ 
 c. climate-weather-modeling:
-	takes most of previous data and incorporates evaporation and SPEI index into 
-		appropriate measures, saves as weathers.rds 	
+
+   * takes most of previous data and incorporates evaporation and SPEI index into appropriate measures, saves as `weathers.rds`
 
 7: regressions for CO2 flux
 ==============================================
-7a. regression_routines_models: ***archaic***: regresses CO2 flux against variables of interest, first stab
-	at different ways of incorporating Lake as random effect vs factor etc. reads in
-	regvars. no output produced
-7b. regression_routines_ph: ***archaic***: regresses pH against variables of interest, Year and Lake as
-	random effect. reads in regvars. no output.
-7c. regression_routines_eachlake: ***models developed and then selected for paper***: including
-	rationale. subsets to WW for Matt's paper. reads in regvars, weathers.rds. produces models and
-	model summaries as output. 
-8a. eachlake-gamplots: ***archaic***: plots old models and saves output; should not be run unless
+
+a. `regression_routines_models.R`: ***archaic***: regresses CO2 flux against variables of interest, first stab at different ways of incorporating Lake as random effect vs factor etc. reads in regvars. no output produced
+b. `regression_routines_ph.R`: ***archaic***: regresses pH against variables of interest, Year and Lake as	random effect. reads in regvars. no output.
+c. `regression_routines_eachlake.R`: ***models developed and then selected for paper***: including rationale. subsets to WW for Matt's paper. reads in regvars, weathers.rds. produces models and model summaries as output. 
+
+8: Something
+=========================
+
+a. `eachlake-gamplots.R`: ***archaic***: plots old models and saves output; should not be run unless
 	old models wanted
-8b. eachlake-gamplots-lagged: plots paper figures from regression models, and summary plot
+b. `eachlake-gamplots-lagged.R`: plots paper figures from regression models, and summary plot
 
 9: sensitivity analyses for CO2 flux:
 ==============================================
-9a. sensitivity: requires regvars and fluxes, and function gasExchangeSensitivity; computes sensitivity
-	analysis and saves plots and objects
-9b. sensitivity-larea: runs sensitivity analysis with lake area as a variable as well. Not used for paper
 
-
+a. `sensitivity.R`: requires regvars and fluxes, and function gasExchangeSensitivity; computes sensitivity analysis and saves plots and objects
+b. `sensitivity-larea.R`: runs sensitivity analysis with lake area as a variable as well. Not used for paper
 
