@@ -1,6 +1,8 @@
 # jgr-co2-flux
 
-Code and public data for paper on CO2 flux time series in Qu'Appelle lakes
+[![Repository DOI](https://zenodo.org/badge/125887868.svg)](https://zenodo.org/badge/latestdoi/125887868)
+
+Code and public data for paper on CO2 flux time series in Qu'Appelle lakes.
 
 ## Original code repository
 
