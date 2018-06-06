@@ -9,7 +9,7 @@ All scripts assume that the working directory is `../scripts/`
 To produce paper objects, run this:
 ===================================
 
-## Caveat: no safequards are in place for there not being a package installed...
+**Caveat: no safequards are in place for there not being a package installed...**
 
 ```r
 source("gasexchange_pressuredata.R")
@@ -36,7 +36,7 @@ source("sensitivity.R")
 5: calculate CO2 flux
 ============================================
 
-5.
+5. 
     a. `co2_scenarios.R`: reads in params. requires maunaloa, salcalc, gasExchangeFlex. Inserts also kerri's values for winds. Creates SalCalc in params and merges maunaloa pressure with params
 	    +++ replaces outlier cond, pH, salinity values with NA. Saves updated params as `params-flux.rds`
     b. `co2data_comparisons.R`: reads in archaic `gasFlux.rds` and tests similarity with Kerri Finlay's results. Requires archaic gasExchange functions. No output saved.
