@@ -41,22 +41,22 @@ source("sensitivity.R")
 	    +++ replaces outlier cond, pH, salinity values with NA. Saves updated params as `params-flux.rds`
     ii. `co2data_comparisons.R`: reads in archaic `gasFlux.rds` and tests similarity with Kerri Finlay's results. Requires archaic gasExchange functions. No output saved.
 
-6: prepare data for regressions for CO2 flux
+6: Prepare data for regressions for CO2 flux
 =============================================
 
-a. co2ExplVar:
+a. `co2ExplVar.R`:
 
-   1. takes pdo from online and creates an annual mean column. saves as pdo.rds
-   2. takes soi from online and saves as soi_stand.rds (nonstand for unstandardised data)
-   3. takes nao from online and saves as naoseasonal.rds
-   4. takes temperature rds and computes monthly and annual means
-   5. takes relhum rds (already monthly reso)
+   1. takes pdo from online and creates an annual mean column. saves as `pdo.rds`
+   2. takes soi from online and saves as `soi_stand.rds` (nonstand for unstandardised data)
+   3. takes nao from online and saves as `naoseasonal.rds`
+   4. takes `temperature.rds` and computes monthly and annual means
+   5. takes `relhum.rds` (already monthly reso)
    6. takes various supporting data from database queries. creates means for chl a and bottle production estimates
       * makes a production outlier NA
    7. merges all above excepting climate indices, and saves as co2explained.rds
       * this has all the POTENTIAL predictors too	
 
-b. regression_routines:
+b. `regression_routines.R`:
 
    * combines co2 flux with predictors
    * subsets available predictors from co2explained
@@ -64,7 +64,7 @@ b. regression_routines:
    * deals with remaining outliers
    * saves data frame with selected predictors and `NA`s removed as `regvars.rds`
  
-c. climate-weather-modeling:
+c. `climate-weather-modeling.R`:
 
    * takes most of previous data and incorporates evaporation and SPEI index into appropriate measures, saves as `weathers.rds`
 
@@ -82,7 +82,7 @@ a. `eachlake-gamplots.R`: ***archaic***: plots old models and saves output; shou
 	old models wanted
 b. `eachlake-gamplots-lagged.R`: plots paper figures from regression models, and summary plot
 
-9: sensitivity analyses for CO2 flux:
+9: Sensitivity analyses for CO2 flux:
 ==============================================
 
 a. `sensitivity.R`: requires regvars and fluxes, and function gasExchangeSensitivity; computes sensitivity analysis and saves plots and objects
