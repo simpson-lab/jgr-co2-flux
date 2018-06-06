@@ -1,8 +1,13 @@
-# jgr-co2-flux
+# Generalized additive models of climatic and metabolic controls of sub‐annual variation in pCO2 in productive hardwater lakes
 
-[![Repository DOI](https://zenodo.org/badge/125887868.svg)](https://zenodo.org/badge/latestdoi/125887868)
+* Code Repository DOI: [![Repository DOI](https://zenodo.org/badge/125887868.svg)](https://zenodo.org/badge/latestdoi/125887868)
+* Paper DOI: [10.1029/2018JG004506](https://doi.org/10.1029/2018JG004506)
+* Authors: E. Wiik, H. A. Haig, N. M. Hayes, K. Finlay, G. L. Simpson, R. J. Vogt, & P. R. Leavitt
+* Journal of Geophysical Research: Biogeosciences
 
-Code and public data for paper on CO2 flux time series in Qu'Appelle lakes.
+## Acces to private data
+
+Some of the data used here are long-term monitoring data from the Qu'Appelle Long-term Ecological Research Program that are not at this time publicly available. These data are stored privately at [github.com/simpson-lab/jgr-co2-flux-private-data](https://github.com/simpson-lab/jgr-co2-flux-private-data). Access to this repository can be requested by emailing Peter Leavitt (Peter.Leavitt@uregina.ca).
 
 ## Original code repository
 
