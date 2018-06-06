@@ -25,7 +25,7 @@ source("eachlake-gamplots-lagged.R")
 source("sensitivity.R")
 ```
 
-1--4: prepare data for calculating co2 flux
+1-4: prepare data for calculating co2 flux
 ===========================================
 1. `gasexchange_pressuredata.R`: grabs raw hourly data from online and saves dmet.
 2. `weathermanipulations.R` `(*)`: grabs dmet and calculates mean wind, pressure, temperature and humidity; spits out all data frames as separate rds's (`[*]data.rds`)
@@ -36,31 +36,30 @@ source("sensitivity.R")
 5: calculate CO2 flux
 ============================================
 
-5. 
-    a. `co2_scenarios.R`: reads in params. requires maunaloa, salcalc, gasExchangeFlex. Inserts also kerri's values for winds. Creates SalCalc in params and merges maunaloa pressure with params
+5. this does two things
+    i. `co2_scenarios.R`: reads in params. requires maunaloa, salcalc, gasExchangeFlex. Inserts also kerri's values for winds. Creates SalCalc in params and merges maunaloa pressure with params
 	    +++ replaces outlier cond, pH, salinity values with NA. Saves updated params as `params-flux.rds`
-    b. `co2data_comparisons.R`: reads in archaic `gasFlux.rds` and tests similarity with Kerri Finlay's results. Requires archaic gasExchange functions. No output saved.
+    ii. `co2data_comparisons.R`: reads in archaic `gasFlux.rds` and tests similarity with Kerri Finlay's results. Requires archaic gasExchange functions. No output saved.
 
 6: prepare data for regressions for CO2 flux
 =============================================
-6a. co2ExplVar: 
-	takes pdo from online and creates an annual mean column. saves as pdo.rds
-	takes soi from online and saves as soi_stand.rds (nonstand for unstandardised data)
-	takes nao from online and saves as naoseasonal.rds
-	takes temperature rds and computes monthly and annual means
-	takes relhum rds (already monthly reso)
 
-	takes various supporting data from database queries. creates means for chl a and
-		bottle production estimates
-		+++ makes a production outlier NA
-	
-	merges all above excepting climate indices, and saves as co2explained.rds
-		+++ this has all the POTENTIAL predictors too	
-6b. regression_routines: combines co2 flux with predictors; subsets available predictors from
+a. co2ExplVar:
+
+   1. takes pdo from online and creates an annual mean column. saves as pdo.rds
+   2. takes soi from online and saves as soi_stand.rds (nonstand for unstandardised data)
+   3. takes nao from online and saves as naoseasonal.rds
+   4. takes temperature rds and computes monthly and annual means
+   5. takes relhum rds (already monthly reso)
+   6. takes various supporting data from database queries. creates means for chl a and bottle production estimates
+      * makes a production outlier NA
+   7. merges all above excepting climate indices, and saves as co2explained.rds
+      * this has all the POTENTIAL predictors too	
+b. regression_routines: combines co2 flux with predictors; subsets available predictors from
 		co2explained; reads in params-flux.rds; co2explained.rds
 	deals with remaining outliers
 	saves data frame with selected predictors and NAs removed as regvars.rds 
-6c. climate-weather-modeling:
+c. climate-weather-modeling:
 	takes most of previous data and incorporates evaporation and SPEI index into 
 		appropriate measures, saves as weathers.rds 	
 
